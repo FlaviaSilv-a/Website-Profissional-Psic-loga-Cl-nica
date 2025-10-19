@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Aurora • Psicologia Clínica</title>
+<meta name="description" content="Acolhimento terapêutico com abordagem integrativa. Atendimento online e presencial."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FBF8F5;
+    --paper: #FFFFFF;
+    --ink: #3b3029;
+    --muted: #7b6f66;
+    --accent: #b98e63; /* warm terracotta */
+    --accent-2: #f2e7d9;
+    --glass: rgba(59,48,41,0.06);
+    --radius: 14px;
+    --container: 1100px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:var(--ink);line-height:1.5}
+  .wrap{max-width:var(--container);margin:0 auto;padding:28px}
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{display:flex;align-items:center;gap:14px}
+  .logo{width:56px;height:56px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--accent),#caa77f);box-shadow:0 6px 22px rgba(0,0,0,0.06);color:white;font-weight:700;font-family:'Playfair Display',serif}
+  .brand-title{line-height:1}
+  .brand-title .title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700}
+  .brand-title .subtitle{font-size:12px;color:var(--muted)}
+  nav{display:flex;gap:18px;align-items:center}
+  nav a{color:var(--ink);text-decoration:none;font-weight:600;opacity:0.95}
+  .btn-secondary{padding:9px 14px;border-radius:10px;background:transparent;border:1px solid rgba(59,48,41,0.06);font-weight:700}
+  .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:40px 0}
+  .hero-card{background:var(--paper);border-radius:18px;padding:28px;box-shadow:0 12px 40px rgba(59,48,41,0.06)}
+  h1{font-family:'Playfair Display',serif;font-size:36px;margin:0 0 12px}
+  p.lead{margin:0 0 18px;color:var(--muted);font-size:16px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn-primary{background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:10px}
+  .card-quiet{background:linear-gradient(180deg,var(--accent-2),#fff);padding:18px;border-radius:12px}
+  .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .chip{background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px}
+  main section{padding:40px 0;border-top:1px solid rgba(59,48,41,0.04)}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .service{background:var(--paper);padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(59,48,41,0.04)}
+  .testimonial{background:linear-gradient(180deg,#fff,var(--accent-2));padding:18px;border-radius:12px;font-style:italic;color:var(--muted)}
+  footer{padding:28px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(59,48,41,0.04)}
+  /* floating whatsapp (left to be different) */
+  .whatsapp-fab{position:fixed;left:20px;bottom:20px;background:var(--accent);color:white;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 16px 50px rgba(185,142,99,0.14);z-index:60}
+  .whatsapp-fab a{color:white;text-decoration:none;display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+  /* responsive */
+  @media (max-width:980px){
+    .hero{grid-template-columns:1fr;gap:18px}
+    nav{display:none}
+    .mobile-hamb{display:inline-flex}
+  }
+  .mobile-hamb{display:none}
+  /* subtle animations */
+  .fade-up{opacity:0;transform:translateY(10px);transition:all .6s cubic-bezier(.2,.9,.3,1)}
+  .fade-up.show{opacity:1;transform:translateY(0)}
+  /* accessibility */
+  a:focus{outline:3px solid rgba(185,142,99,0.18);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+  <div class="wrap" id="top">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">A</div>
+        <div class="brand-title">
+          <div class="title">Aurora</div>
+          <div class="subtitle">Psicologia Clínica • acolhimento integrativo</div>
+        </div>
+      </div>
+
+      <nav aria-label="Menu principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#metodo">Método</a>
+        <a href="#atendimentos">Atendimentos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a class="btn-secondary" href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Quero%20informações%20sobre%20atendimento." target="_blank">Entrar em contato</a>
+      </nav>
+
+      <div class="mobile-hamb" aria-hidden="true">
+        <button id="openMobile" class="btn-secondary">Menu</button>
+      </div>
+    </header>
+
+    <section class="hero" id="sobre">
+      <div class="hero-card fade-up" data-delay="0">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <div style="max-width:68%">
+            <h1>Acolhimento terapêutico com empatia e método</h1>
+            <p class="lead">Trabalho com abordagens integrativas — psicoterapia individual, casal e grupo. Espaço seguro para quem busca desenvolver autoconhecimento, ferramentas práticas e transformar o dia a dia.</p>
+            <div class="chips" aria-hidden="true">
+              <div class="chip">Terapia individual</div>
+              <div class="chip">TCC & EMDR</div>
+              <div class="chip">Atendimento online</div>
+            </div>
+            <div style="margin-top:18px" class="cta-row">
+              <a class="btn-primary" href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Quero%20agendar%20uma%20consulta." target="_blank">Agendar via WhatsApp</a>
+              <a style="align-self:center;color:var(--muted);font-weight:700;text-decoration:none" href="#atendimentos">Ver atendimentos →</a>
+            </div>
+          </div>
+          <div style="width:220px">
+            <div style="border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(59,48,41,0.06);">
+              <!-- logo / mark card -->
+              <div style="background:linear-gradient(135deg,#f7efe6,#f2e7d9);padding:24px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C9 6 7 8 7 11a5 5 0 0010 0c0-3-2-5-5-9z" fill="#b98e63"/>
+                  <circle cx="12" cy="14" r="1.6" fill="#fff" opacity="0.9"/>
+                </svg>
+                <div style="font-weight:700">Dra. Ana Flores</div>
+                <div style="font-size:13px;color:var(--muted)">CRP 00/00000 • Psicóloga Clínica</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside style="align-self:start">
+        <div class="card-quiet fade-up" data-delay="120">
+          <strong>Atendimento</strong>
+          <div style="margin-top:8px;color:var(--muted)">Online e presencial. Sessões de 50 minutos, com foco em resultados práticos e acolhimento.</div>
+        </div>
+      </aside>
+    </section>
+
+    <main>
+      <section id="metodo" aria-label="Método">
+        <div class="fade-up" data-delay="40">
+          <h2 style="margin:0 0 10px">Método</h2>
+          <p style="margin:0 0 18px;color:var(--muted)">Combino escuta ativa com intervenções baseadas em evidências, ajustadas à singularidade de cada pessoa.</p>
+        </div>
+
+        <div class="grid-3" style="margin-top:18px">
+          <div class="service fade-up" data-delay="80">
+            <strong>Terapia cognitivo-comportamental</strong>
+            <p class="muted" style="margin-top:8px">Estratégias práticas para manejar emoções e pensamentos disfuncionais.</p>
+          </div>
+          <div class="service fade-up" data-delay="120">
+            <strong>EMDR</strong>
+            <p class="muted" style="margin-top:8px">Trabalho focalizado em eventos traumáticos e memórias perturbadoras.</p>
+          </div>
+          <div class="service fade-up" data-delay="160">
+            <strong>Psicoterapia integrativa</strong>
+            <p class="muted" style="margin-top:8px">Abordagem personalizada com técnicas humanistas e psicodinâmicas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="atendimentos" aria-label="Atendimentos">
+        <div class="fade-up" data-delay="40" style="margin-bottom:12px">
+          <h2 style="margin:0 0 10px">Atendimentos</h2>
+          <p style="margin:0;color:var(--muted)">Ofereço formatos flexíveis para diferentes necessidades.</p>
+        </div>
+
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:14px">
+          <div class="service" style="flex:1;min-width:220px">
+            <strong>Individual</strong>
+            <p class="muted" style="margin-top:8px">Sessões semanais ou quinzenais — foco no processo terapêutico contínuo.</p>
+          </div>
+          <div class="service" style="flex:1;min-width:220px">
+            <strong>Casal</strong>
+            <p class="muted" style="margin-top:8px">Trabalho com comunicação e resolução de conflitos.</p>
+          </div>
+          <div class="service" style="flex:1;min-width:220px">
+            <strong>Oficinas e grupos</strong>
+            <p class="muted" style="margin-top:8px">Temas como manejo do estresse, ansiedade e autorregulação.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="depoimentos" aria-label="Depoimentos">
+        <div class="fade-up" data-delay="40">
+          <h2 style="margin:0 0 10px">Depoimentos</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px">
+          <div class="testimonial fade-up" data-delay="80">"Senti segurança desde a primeira sessão. Ferramentas práticas que mudaram meu dia a dia." — M.F.</div>
+          <div class="testimonial fade-up" data-delay="120">"Profissionalismo e empatia. Acolhimento que gera resultados." — R.S.</div>
+        </div>
+      </section>
+
+      <section id="contato" aria-label="Contato">
+        <div class="fade-up" data-delay="40">
+          <h2 style="margin:0 0 10px">Contato</h2>
+          <p style="margin:0 0 12px;color:var(--muted)">Prefere falar por WhatsApp? Clique no botão flutuante. Ou use o número abaixo para ligações/WhatsApp.</p>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
+            <a class="btn-primary" href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Quero%20marcar%20uma%20consulta." target="_blank">Falar no WhatsApp</a>
+            <div style="color:var(--muted);font-weight:700">(31) 99999-9999</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <strong>Aurora • Psicologia</strong><br>
+        <span style="color:var(--muted)">Acolhimento com ética • CRP 00/00000</span>
+      </div>
+      <div style="color:var(--muted)">© 2025 Aurora Psicologia</div>
+    </footer>
+  </div>
+
+  <div class="whatsapp-fab" title="WhatsApp">
+    <a href="https://wa.me/5531999999999?text=Ol%C3%A1!%20Quero%20agendar%20uma%20consulta." target="_blank" aria-label="WhatsApp">💬</a>
+  </div>
+
+<script>
+  // simple reveal on scroll
+  document.addEventListener('DOMContentLoaded', function(){
+    const els = document.querySelectorAll('.fade-up');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.09});
+    els.forEach(el => io.observe(el));
+
+    // smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const id = this.getAttribute('href');
+        if(id === '#' || id === '') return;
+        const el = document.querySelector(id);
+        if(!el) return;
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    // mobile menu fallback
+    const open = document.getElementById('openMobile');
+    if(open){
+      open.addEventListener('click', function(){
+        const nav = document.querySelector('nav');
+        if(nav.style.display === 'flex') nav.style.display = '';
+        else nav.style.display = 'flex';
+      });
+    }
+  });
+</script>
+</body>
+</html>
